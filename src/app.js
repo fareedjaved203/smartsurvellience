@@ -6,6 +6,7 @@ const hbs = require("hbs");
 const port = process.env.PORT || 3000;
 require("./db/conn");
 const Register = require("./models/registers");
+const async = require("hbs/lib/async");
 
 const static_path = path.join(__dirname, "../public");
 const template_path = path.join(__dirname, "../templates/views");
@@ -15,8 +16,8 @@ app.set("view engine", "hbs");
 app.set("views", template_path);
 hbs.registerPartials(partials_path);
 
-app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.json()); //built in middle ware in express
+app.use(express.urlencoded({ extended: false }));//built in middle ware in express with parameter extended
 
 
 app.get('/', (req, res) => {
@@ -31,6 +32,9 @@ app.get('/premiumHome', (req, res) => {
 })
 app.get('/premiumFeedback', (req, res) => {
     res.render("premiumFeedback");
+})
+app.get('/premiumSurveillance', (req, res) => {
+    res.render("premiumSurveillance");
 })
 
 app.post('/register', async (req, res) => {
@@ -68,6 +72,25 @@ app.post('/register', async (req, res) => {
     }
 })
 
+app.post('/', async (req, res) => {
+    try {
+        const email = req.body.email;
+        const password = req.body.password;
+
+        const userEmail = await Register.findOne({ email: email });
+
+        if (userEmail.password === password) {
+            res.status(201).render("premiumHome");
+        }
+        else {
+            res.send("Email/Password in Incorrect");
+        }
+
+    } catch (error) {
+        res.status(400).send("Invalid Email");
+
+    }
+})
 app.listen(port, () => {
     console.log(`server is runnung at port ${port}`);
 });

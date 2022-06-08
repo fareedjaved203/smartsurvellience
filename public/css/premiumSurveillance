@@ -293,7 +293,7 @@ textarea::placeholder {
 
 .home {
     position: absolute;
-    background-color: #33CCFF;
+    background-color: transparent;
     align-items: center;
     justify-content: center;
     text-align: center;
@@ -304,6 +304,10 @@ textarea::placeholder {
 .home img {
     width: 30%;
     height: 8%;
+}
+
+.home:hover {
+    background-color: #00BDFC;
 }
 
 .bilateral {
@@ -366,6 +370,7 @@ textarea::placeholder {
 .surveillance {
     padding-top: 10px;
     padding-bottom: 5px;
+    background-color: #33CCFF;
     position: absolute;
     align-items: center;
     justify-content: center;
@@ -376,10 +381,6 @@ textarea::placeholder {
 .surveillance img {
     width: 30%;
     height: 8%;
-}
-
-.surveillance:hover {
-    background-color: #00BDFC;
 }
 
 .intro {

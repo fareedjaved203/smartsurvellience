@@ -40,25 +40,29 @@
                         Surveillance
                     </p>
                 </div>
-                <div class="email">
-                    <p class="lead text">Email</p>
-                    <div class="form-floating mb-3">
-                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-                        <label for="floatingInput">Email address</label>
+                <form action="/" method="post">
+                    <div class="email">
+                        <p class="lead text">Email</p>
+                        <div class="form-floating mb-3">
+                            <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com"
+                                name="email">
+                            <label for="floatingInput">Email address</label>
+                        </div>
+
                     </div>
 
-                </div>
-
-                <div class="password">
-                    <p class="lead text">Password</p>
-                    <div class="form-floating">
-                        <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-                        <label for="floatingPassword">Password</label>
+                    <div class="password">
+                        <p class="lead text">Password</p>
+                        <div class="form-floating">
+                            <input type="password" class="form-control" id="floatingPassword" placeholder="Password"
+                                name="password">
+                            <label for="floatingPassword">Password</label>
+                        </div>
                     </div>
-                </div>
 
+                    <input type="submit" class="btn btn1" value="Log In">
+                </form>
 
-                <button type="button" class="btn btn1">Log In</button>
             </div>
 
         </div>
