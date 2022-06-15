@@ -76,4 +76,25 @@ else if (flag1 == "True") {
     flag1 = localStorage.getItem("flag");
 
 }
+const startVideo = document.getElementById('videocc');
+
+var video = document.getElementById('video')
+var canvas = document.getElementById('canvas')
+var context = canvas.getContext('2d');
+
+var bottomm = document.getElementById('bottomm');
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia ||
+    navigator.mozGetUserMedia || navigator.oGetUserMedia || navigator.msGetUserMedia;
+
+if (navigator.getUserMedia) {
+    navigator.getUserMedia({ video: true }, streamWebCam, throwError);
+}
+function streamWebCam(stream) {
+    video.srcObject = stream;
+    video.play();
+}
+function throwError(e) {
+    alert(e.name);
+}
 

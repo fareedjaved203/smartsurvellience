@@ -404,8 +404,32 @@ textarea::placeholder {
 }
 
 .carousell {
-    position: fixed;
-    width: 45%;
-    top: 20%;
+    position: fixed !important;
+    width: 5%;
+    top: 15%;
     left: 30%;
+}
+
+.carousell img {
+    width: 600px;
+}
+
+.button-grp {
+    position: fixed !important;
+    top: 80%;
+    left: 32%;
+
+}
+
+.btn-surveillance {
+    background-color: #000066 !important;
+    border: none !important;
+    outline: none !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-surveillance:hover {
+    background-color: #999900 !important;
+    transition: 0.2s ease;
 }

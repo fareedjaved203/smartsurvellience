@@ -37,6 +37,10 @@ app.get('/premiumSurveillance', (req, res) => {
     res.render("premiumSurveillance");
 })
 
+app.get('/admin', (req, res) => {
+    res.render("admin");
+})
+
 app.post('/register', async (req, res) => {
     try {
         console.log(req.body)

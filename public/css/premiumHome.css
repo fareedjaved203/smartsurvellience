@@ -403,8 +403,68 @@ textarea::placeholder {
 }
 
 .carousell {
-    position: fixed;
+    position: fixed !important;
     width: 45%;
-    top: 20%;
+    top: 15%;
     left: 30%;
+}
+
+#videocc {
+    position: fixed !important;
+    top: 10%;
+    left: 25%;
+    width: 100%;
+}
+
+#video {
+    width: 55%;
+}
+
+
+
+
+
+.btn-surveillance {
+    position: fixed !important;
+    top: 75%;
+    left: 47%;
+    background-color: #000066 !important;
+    border: none !important;
+    outline: none !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-surveillance:hover {
+    background-color: #999900 !important;
+    transition: 0.2s ease;
+}
+
+.btn-stop-surveillance {
+    position: fixed !important;
+    top: 88%;
+    left: 47%;
+    background-color: red !important;
+    border: none !important;
+    outline: none !important;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.btn-stop-surveillance:hover {
+    background-color: darkred !important;
+    transition: 0.2s ease;
+}
+
+.bottom-text {
+    position: fixed !important;
+    top: 84%;
+    left: 37%;
+    font-size: 25px;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.video {
+    position: fixed !important;
 }
